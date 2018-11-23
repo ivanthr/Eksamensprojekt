@@ -15,9 +15,10 @@ public class Main {
 			System.out.println("IOE: " + e.getMessage());
 		}
 		
-		
+		int i = 0;
 		for(Movie m : movies) {
-			System.out.println(m);
+			System.out.println(i + ": " + m);
+			i++;
 		}
 	}
 
