@@ -12,6 +12,14 @@ public class Movie {
 	}
 	
 	public String toString() {
-		return "" + title + ", " + year + ", " + categories[0] + ", " + rating;
+		String cats = "[ ";
+		String sep = "";
+		for(String s : categories) {
+			cats += sep + s;
+			sep = ", ";
+		}
+		cats += " ]";
+		
+		return "" + title + ", " + year + ", " + cats + ", " + rating;
 	}
 }
