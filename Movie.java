@@ -4,6 +4,7 @@ public class Movie {
 	public int year;
 	public String[] categories;
 	public double rating;
+	
 	public Movie(String title, int year, String[] categories, double rating) {
 		this.title = title;
 		this.year = year;

@@ -6,6 +6,7 @@ import java.util.*;
 
 public class MovieReader {
 	private String filename;
+	
 	public MovieReader(String filename) {
 		this.filename = filename;
 	}
