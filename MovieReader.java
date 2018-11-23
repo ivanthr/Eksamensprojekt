@@ -24,15 +24,20 @@ public class MovieReader {
 		while(br.ready()) {
 			String line = br.readLine();
 			String[] parts = line.split(";");
+			// find title
 			String title = parts[0].trim();
+			// find year
 			int year = Integer.parseInt(parts[1].trim());
+			// find categories
 			String[] categoryParts = parts[2].split(",");
 			String[] categories = new String[categoryParts.length];
 			for(int i=0; i<categories.length; i++) {
 				categories[i] = categoryParts[i].trim();
-			}			
+			}
+			// find rating
 			String d = parts[3].replace(',', '.').trim();
 			double rating = Double.parseDouble(d);
+			// add movie
 			movies.add(new Movie(title, year, categories, rating));
 		}
 		

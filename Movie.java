@@ -1,9 +1,9 @@
 
 public class Movie {
-	public String title;
-	public int year;
-	public String[] categories;
-	public double rating;
+	private String title;
+	private int year;
+	private String[] categories;
+	private double rating;
 	
 	public Movie(String title, int year, String[] categories, double rating) {
 		this.title = title;

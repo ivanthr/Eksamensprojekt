@@ -1,11 +1,11 @@
 
 public class Series {
-	public String title;
-	public boolean hasFinished;
-	public int[] years; //years[0] = start year, years[1] = end year
-	public String[] categories;
-	public double rating;
-	public String[] seasons;
+	private String title;
+	private boolean hasFinished;
+	private int[] years; //years[0] = start year, years[1] = end year
+	private String[] categories;
+	private double rating;
+	private String[] seasons;
 	
 	public Series(String title, int yearStart, int yearEnd, String[] categories, double rating, String[] seasons) {
 		this.years = new int[2];

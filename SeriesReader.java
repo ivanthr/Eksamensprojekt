@@ -32,8 +32,12 @@ public class SeriesReader {
 			int yearEnd = -1;
 			String[] years = parts[1].trim().split("-");
 			if(years.length == 1) {
-				yearStart = Integer.parseInt(years[0]);
-				yearEnd = -1;
+				if(parts[1].contains("-")) { // only one season in this series
+					yearStart = Integer.parseInt(years[0]);
+					yearEnd = -1;
+				} else {
+					yearStart = yearEnd = Integer.parseInt(years[0]);
+				}
 			} else if(years.length == 2) {
 				yearStart = Integer.parseInt(years[0]);
 				yearEnd = Integer.parseInt(years[1]);
